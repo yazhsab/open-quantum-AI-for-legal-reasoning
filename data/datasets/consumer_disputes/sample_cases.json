@@ -1,0 +1,205 @@
+[
+  {
+    "case_id": "CD-001-2024",
+    "case_type": "consumer_dispute",
+    "input_data": {
+      "complaint_type": "defective_goods",
+      "consumer_name": "Ravi Kumar",
+      "consumer_address": "123 MG Road, Bangalore, Karnataka",
+      "consumer_phone": "9876543210",
+      "consumer_email": "ravi.kumar@email.com",
+      "opposite_party": "Samsung Electronics India Pvt Ltd",
+      "opposite_party_address": "Electronic City, Bangalore, Karnataka",
+      "product_service": "Samsung Galaxy S23 Mobile Phone",
+      "purchase_date": "2024-01-10",
+      "purchase_amount": 75000.0,
+      "complaint_description": "Mobile phone developed screen flickering issue within 2 months of purchase. Service center refused to replace under warranty claiming physical damage.",
+      "evidence_documents": ["Purchase Invoice", "Warranty Card", "Service Center Report", "Photos of Defect"],
+      "forum_level": "district",
+      "relief_sought": "Replacement of defective mobile phone and compensation for mental agony",
+      "compensation_claimed": 25000.0,
+      "previous_complaints": false,
+      "legal_notice_sent": true,
+      "legal_notice_date": "2024-02-15"
+    },
+    "expected_output": {
+      "jurisdiction_validity": true,
+      "forum_competence": "district_forum",
+      "evidence_strength": {
+        "documentary_evidence": 0.8,
+        "witness_evidence": 0.6,
+        "expert_evidence": 0.7,
+        "overall_strength": 0.75
+      },
+      "success_probability": 0.78,
+      "relief_likelihood": {
+        "replacement": 0.85,
+        "refund": 0.70,
+        "compensation": 0.65,
+        "punitive_damages": 0.40
+      },
+      "estimated_compensation": {
+        "product_value": 75000.0,
+        "mental_agony": 15000.0,
+        "litigation_costs": 5000.0,
+        "total": 95000.0
+      },
+      "recommendations": [
+        "File complaint in District Consumer Forum within limitation period",
+        "Obtain independent technical expert opinion on defect",
+        "Emphasize manufacturer's warranty obligations",
+        "Seek replacement as primary relief with compensation"
+      ],
+      "case_duration_estimate": {
+        "min_months": 6,
+        "max_months": 18
+      },
+      "litigation_cost_estimate": 15000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "karnataka",
+      "date_created": "2024-02-20",
+      "complexity_level": "medium",
+      "verified": true,
+      "legal_principles": ["consumer_protection_act_2019", "warranty_obligations", "defective_goods"]
+    }
+  },
+  {
+    "case_id": "CD-002-2024",
+    "case_type": "consumer_dispute",
+    "input_data": {
+      "complaint_type": "deficient_service",
+      "consumer_name": "Priya Sharma",
+      "consumer_address": "456 Sector 15, Noida, Uttar Pradesh",
+      "consumer_phone": "9876543211",
+      "consumer_email": "priya.sharma@email.com",
+      "opposite_party": "HDFC Bank Ltd",
+      "opposite_party_address": "Banking Tower, Connaught Place, Delhi",
+      "product_service": "Home Loan Processing Service",
+      "purchase_date": "2023-11-01",
+      "purchase_amount": 50000.0,
+      "complaint_description": "Bank charged processing fees but failed to process home loan application within promised timeline. Loan was rejected after 6 months without proper reason.",
+      "evidence_documents": ["Loan Application", "Fee Payment Receipt", "Email Communications", "Bank's Timeline Commitment"],
+      "forum_level": "state",
+      "relief_sought": "Refund of processing fees and compensation for financial loss",
+      "compensation_claimed": 200000.0,
+      "previous_complaints": true,
+      "legal_notice_sent": true,
+      "legal_notice_date": "2024-01-10"
+    },
+    "expected_output": {
+      "jurisdiction_validity": true,
+      "forum_competence": "state_commission",
+      "evidence_strength": {
+        "documentary_evidence": 0.9,
+        "witness_evidence": 0.5,
+        "expert_evidence": 0.6,
+        "overall_strength": 0.80
+      },
+      "success_probability": 0.82,
+      "relief_likelihood": {
+        "refund": 0.90,
+        "compensation": 0.75,
+        "punitive_damages": 0.60,
+        "interest": 0.85
+      },
+      "estimated_compensation": {
+        "fee_refund": 50000.0,
+        "opportunity_loss": 150000.0,
+        "mental_agony": 25000.0,
+        "litigation_costs": 10000.0,
+        "total": 235000.0
+      },
+      "recommendations": [
+        "File complaint in State Consumer Commission due to compensation amount",
+        "Emphasize bank's service commitment and timeline breach",
+        "Calculate opportunity loss due to delayed loan processing",
+        "Seek punitive damages for unfair trade practice"
+      ],
+      "case_duration_estimate": {
+        "min_months": 12,
+        "max_months": 30
+      },
+      "litigation_cost_estimate": 35000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "uttar_pradesh",
+      "date_created": "2024-01-15",
+      "complexity_level": "high",
+      "verified": true,
+      "legal_principles": ["deficient_service", "unfair_trade_practice", "banking_services"]
+    }
+  },
+  {
+    "case_id": "CD-003-2024",
+    "case_type": "consumer_dispute",
+    "input_data": {
+      "complaint_type": "unfair_trade_practice",
+      "consumer_name": "Amit Patel",
+      "consumer_address": "789 CG Road, Ahmedabad, Gujarat",
+      "consumer_phone": "9876543212",
+      "consumer_email": "amit.patel@email.com",
+      "opposite_party": "Reliance Digital Store",
+      "opposite_party_address": "SG Highway, Ahmedabad, Gujarat",
+      "product_service": "Laptop with Extended Warranty",
+      "purchase_date": "2024-02-01",
+      "purchase_amount": 85000.0,
+      "complaint_description": "Store sold laptop with false claims about specifications and forced extended warranty purchase. Laptop performance is significantly lower than advertised.",
+      "evidence_documents": ["Purchase Bill", "Advertisement Material", "Technical Specifications", "Performance Test Results"],
+      "forum_level": "district",
+      "relief_sought": "Refund of laptop cost and cancellation of extended warranty",
+      "compensation_claimed": 50000.0,
+      "previous_complaints": false,
+      "legal_notice_sent": false,
+      "legal_notice_date": null
+    },
+    "expected_output": {
+      "jurisdiction_validity": true,
+      "forum_competence": "district_forum",
+      "evidence_strength": {
+        "documentary_evidence": 0.85,
+        "witness_evidence": 0.4,
+        "expert_evidence": 0.8,
+        "overall_strength": 0.78
+      },
+      "success_probability": 0.80,
+      "relief_likelihood": {
+        "refund": 0.75,
+        "warranty_cancellation": 0.90,
+        "compensation": 0.70,
+        "punitive_damages": 0.65
+      },
+      "estimated_compensation": {
+        "product_refund": 85000.0,
+        "warranty_refund": 15000.0,
+        "mental_agony": 20000.0,
+        "litigation_costs": 8000.0,
+        "total": 128000.0
+      },
+      "recommendations": [
+        "Send legal notice before filing complaint",
+        "Obtain technical expert opinion on laptop specifications",
+        "Collect advertisement materials showing false claims",
+        "File complaint for unfair trade practice and misleading advertisement"
+      ],
+      "case_duration_estimate": {
+        "min_months": 8,
+        "max_months": 20
+      },
+      "litigation_cost_estimate": 20000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "gujarat",
+      "date_created": "2024-02-25",
+      "complexity_level": "medium",
+      "verified": true,
+      "legal_principles": ["unfair_trade_practice", "misleading_advertisement", "forced_warranty"]
+    }
+  }
+]

@@ -1,0 +1,177 @@
+[
+  {
+    "case_id": "PD-001-2024",
+    "case_type": "property_dispute",
+    "input_data": {
+      "dispute_type": "title_dispute",
+      "property_type": "residential",
+      "property_address": "Plot No. 123, Sector 45, Gurgaon, Haryana",
+      "property_area": 2000.0,
+      "property_value": 5000000.0,
+      "survey_number": "123/1",
+      "plaintiff_name": "Rajesh Kumar",
+      "plaintiff_address": "123 Main Street, Delhi",
+      "defendant_name": "Suresh Sharma",
+      "defendant_address": "456 Park Avenue, Gurgaon",
+      "title_documents": ["Sale Deed dated 2020", "Registry", "Mutation Records"],
+      "dispute_description": "Dispute over ownership of residential plot with conflicting sale deeds",
+      "possession_status": "Plaintiff in possession since 2020",
+      "case_stage": "suit_filed",
+      "possession_sought": true,
+      "damages_claimed": 500000.0,
+      "declaration_sought": true
+    },
+    "expected_output": {
+      "title_strength": {
+        "plaintiff": 0.75,
+        "defendant": 0.25
+      },
+      "possession_rights": {
+        "current_possession": 0.8,
+        "legal_possession": 0.7
+      },
+      "success_probability": 0.72,
+      "compensation_estimate": {
+        "damages": 500000.0,
+        "costs": 50000.0,
+        "total": 550000.0
+      },
+      "recommendations": [
+        "Strengthen title documents with additional evidence",
+        "Conduct detailed survey of the property",
+        "File for interim injunction to maintain status quo"
+      ],
+      "case_duration_estimate": {
+        "min_months": 18,
+        "max_months": 36
+      },
+      "litigation_cost_estimate": 250000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "haryana",
+      "date_created": "2024-01-15",
+      "complexity_level": "medium",
+      "verified": true,
+      "legal_principles": ["adverse_possession", "title_by_registration", "burden_of_proof"]
+    }
+  },
+  {
+    "case_id": "PD-002-2024",
+    "case_type": "property_dispute",
+    "input_data": {
+      "dispute_type": "partition_suit",
+      "property_type": "agricultural",
+      "property_address": "Village Rampur, District Meerut, Uttar Pradesh",
+      "property_area": 10000.0,
+      "property_value": 8000000.0,
+      "survey_number": "456/2A",
+      "plaintiff_name": "Ram Singh",
+      "plaintiff_address": "Village Rampur, Meerut",
+      "defendant_name": "Shyam Singh",
+      "defendant_address": "Village Rampur, Meerut",
+      "title_documents": ["Ancestral Property Records", "Revenue Records", "Khatauni"],
+      "dispute_description": "Partition of ancestral agricultural land between brothers",
+      "possession_status": "Joint possession by both parties",
+      "case_stage": "pre_litigation",
+      "possession_sought": true,
+      "damages_claimed": 0.0,
+      "declaration_sought": true
+    },
+    "expected_output": {
+      "title_strength": {
+        "plaintiff": 0.5,
+        "defendant": 0.5
+      },
+      "possession_rights": {
+        "current_possession": 0.5,
+        "legal_possession": 0.5
+      },
+      "success_probability": 0.85,
+      "compensation_estimate": {
+        "partition_costs": 100000.0,
+        "survey_costs": 25000.0,
+        "total": 125000.0
+      },
+      "recommendations": [
+        "Attempt family settlement before litigation",
+        "Prepare detailed family tree and property genealogy",
+        "Conduct professional survey for equal division"
+      ],
+      "case_duration_estimate": {
+        "min_months": 12,
+        "max_months": 24
+      },
+      "litigation_cost_estimate": 150000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "uttar_pradesh",
+      "date_created": "2024-01-20",
+      "complexity_level": "low",
+      "verified": true,
+      "legal_principles": ["partition_by_metes_and_bounds", "coparcenary_rights", "hindu_succession_act"]
+    }
+  },
+  {
+    "case_id": "PD-003-2024",
+    "case_type": "property_dispute",
+    "input_data": {
+      "dispute_type": "boundary_dispute",
+      "property_type": "commercial",
+      "property_address": "Shop No. 15, Commercial Complex, Connaught Place, Delhi",
+      "property_area": 500.0,
+      "property_value": 15000000.0,
+      "survey_number": "789/3",
+      "plaintiff_name": "Delhi Traders Pvt Ltd",
+      "plaintiff_address": "Connaught Place, Delhi",
+      "defendant_name": "Metro Shopping Mall",
+      "defendant_address": "Connaught Place, Delhi",
+      "title_documents": ["Lease Deed", "Building Plan Approval", "Occupancy Certificate"],
+      "dispute_description": "Boundary dispute over 2 feet encroachment in commercial property",
+      "possession_status": "Disputed area under defendant's possession",
+      "case_stage": "trial",
+      "possession_sought": true,
+      "damages_claimed": 1000000.0,
+      "injunction_sought": true
+    },
+    "expected_output": {
+      "title_strength": {
+        "plaintiff": 0.65,
+        "defendant": 0.35
+      },
+      "possession_rights": {
+        "current_possession": 0.3,
+        "legal_possession": 0.7
+      },
+      "success_probability": 0.68,
+      "compensation_estimate": {
+        "damages": 1000000.0,
+        "mesne_profits": 200000.0,
+        "costs": 100000.0,
+        "total": 1300000.0
+      },
+      "recommendations": [
+        "Conduct detailed survey with licensed surveyor",
+        "File for mandatory injunction",
+        "Present building plan approvals as evidence"
+      ],
+      "case_duration_estimate": {
+        "min_months": 24,
+        "max_months": 48
+      },
+      "litigation_cost_estimate": 500000.0
+    },
+    "metadata": {
+      "source": "synthetic",
+      "jurisdiction": "india",
+      "state": "delhi",
+      "date_created": "2024-02-01",
+      "complexity_level": "high",
+      "verified": true,
+      "legal_principles": ["encroachment", "mandatory_injunction", "mesne_profits"]
+    }
+  }
+]

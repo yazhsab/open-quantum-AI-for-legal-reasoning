@@ -1,0 +1,161 @@
+{
+  "api_keys": {
+    "indian_kanoon": "YOUR_INDIAN_KANOON_API_KEY_HERE",
+    "ecourts": "YOUR_ECOURTS_API_KEY_HERE",
+    "consumer_forum": "YOUR_CONSUMER_FORUM_API_KEY_HERE",
+    "mact": "YOUR_MACT_API_KEY_HERE"
+  },
+  "data_sources": [
+    {
+      "name": "Indian Kanoon",
+      "base_url": "https://api.indiankanoon.org",
+      "rate_limit": 30,
+      "case_types": [
+        "bail_application",
+        "cheque_bounce",
+        "property_dispute",
+        "motor_vehicle_claim",
+        "consumer_dispute"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "search": "/search",
+        "case_details": "/doc/{doc_id}",
+        "citations": "/citations/{doc_id}"
+      }
+    },
+    {
+      "name": "eCourts Services",
+      "base_url": "https://services.ecourts.gov.in/ecourtindia_v6",
+      "rate_limit": 20,
+      "case_types": [
+        "bail_application",
+        "property_dispute",
+        "family_court",
+        "criminal_cases"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "case_status": "/case_status",
+        "cause_list": "/cause_list",
+        "judgments": "/judgments"
+      }
+    },
+    {
+      "name": "Consumer Forum Database",
+      "base_url": "https://consumerhelpline.gov.in/api",
+      "rate_limit": 25,
+      "case_types": [
+        "consumer_dispute"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "complaints": "/complaints",
+        "orders": "/orders",
+        "statistics": "/statistics"
+      }
+    },
+    {
+      "name": "Motor Accident Claims Tribunal",
+      "base_url": "https://mact.gov.in/api",
+      "rate_limit": 15,
+      "case_types": [
+        "motor_vehicle_claim"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "claims": "/claims",
+        "awards": "/awards",
+        "compensation": "/compensation"
+      }
+    },
+    {
+      "name": "GST Portal",
+      "base_url": "https://services.gst.gov.in/services/api",
+      "rate_limit": 10,
+      "case_types": [
+        "gst_dispute"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "appeals": "/appeals",
+        "orders": "/orders",
+        "refunds": "/refunds"
+      }
+    },
+    {
+      "name": "Income Tax Department",
+      "base_url": "https://www.incometax.gov.in/iec/foportal/api",
+      "rate_limit": 10,
+      "case_types": [
+        "income_tax_appeal"
+      ],
+      "requires_auth": true,
+      "endpoints": {
+        "appeals": "/appeals",
+        "orders": "/orders",
+        "refunds": "/refunds"
+      }
+    }
+  ],
+  "synthetic_data_config": {
+    "enabled": true,
+    "generation_models": {
+      "openai": {
+        "model": "gpt-3.5-turbo",
+        "max_tokens": 2000,
+        "temperature": 0.7
+      },
+      "local": {
+        "model": "microsoft/DialoGPT-medium",
+        "max_length": 1000
+      }
+    },
+    "complexity_distribution": {
+      "low": 0.3,
+      "medium": 0.5,
+      "high": 0.2
+    },
+    "jurisdiction_distribution": {
+      "delhi": 0.15,
+      "mumbai": 0.15,
+      "bangalore": 0.12,
+      "chennai": 0.10,
+      "kolkata": 0.10,
+      "hyderabad": 0.08,
+      "pune": 0.08,
+      "ahmedabad": 0.07,
+      "jaipur": 0.07,
+      "lucknow": 0.08
+    }
+  },
+  "data_quality": {
+    "validation_rules": {
+      "required_fields": [
+        "case_id",
+        "case_type",
+        "input_data",
+        "expected_output"
+      ],
+      "field_types": {
+        "case_id": "string",
+        "case_type": "enum",
+        "success_probability": "float",
+        "compensation_amount": "number"
+      },
+      "value_ranges": {
+        "success_probability": [0.0, 1.0],
+        "compensation_amount": [0, 10000000]
+      }
+    },
+    "deduplication": {
+      "enabled": true,
+      "similarity_threshold": 0.85,
+      "fields_to_compare": [
+        "case_description",
+        "parties_involved",
+        "legal_issues"
+      ]
+    }
+  }
+}

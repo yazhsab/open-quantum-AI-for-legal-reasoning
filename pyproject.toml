@@ -1,0 +1,262 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xqelm"
+version = "1.0.0"
+description = "Explainable Quantum-Enhanced Language Models for Legal Reasoning"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "XQELM Research Team", email = "research@xqelm.org"},
+]
+maintainers = [
+    {name = "XQELM Research Team", email = "research@xqelm.org"},
+]
+keywords = [
+    "quantum-computing",
+    "legal-ai",
+    "natural-language-processing",
+    "explainable-ai",
+    "pennylane",
+    "quantum-machine-learning"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Other/Nonlisted Topic",
+]
+requires-python = ">=3.9"
+dependencies = [
+    # Quantum Computing
+    "pennylane>=0.35.0",
+    "pennylane-qiskit>=0.35.0",
+    "qiskit>=0.45.0",
+    "qiskit-aer>=0.13.0",
+    "qiskit-ibm-runtime>=0.17.0",
+    
+    # Machine Learning & AI
+    "torch>=2.1.0",
+    "transformers>=4.36.0",
+    "sentence-transformers>=2.2.2",
+    "scikit-learn>=1.3.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "pandas>=2.1.0",
+    
+    # Web Framework & API
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "pydantic>=2.5.0",
+    "strawberry-graphql>=0.214.0",
+    "python-multipart>=0.0.6",
+    "python-jose[cryptography]>=3.3.0",
+    
+    # Database & Storage
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.13.0",
+    "psycopg2-binary>=2.9.0",
+    "redis>=5.0.0",
+    "neo4j>=5.14.0",
+    "elasticsearch>=8.11.0",
+    
+    # Task Queue & Async
+    "celery>=5.3.0",
+    "asyncio>=3.4.3",
+    "aioredis>=2.0.0",
+    "asyncpg>=0.29.0",
+    
+    # Natural Language Processing
+    "spacy>=3.7.0",
+    "nltk>=3.8.0",
+    "textblob>=0.17.0",
+    "langdetect>=1.0.9",
+    "indic-nlp-library>=0.81",
+    
+    # Legal Domain Specific
+    "legal-citation-parser>=1.0.0",
+    "dateparser>=1.2.0",
+    "fuzzywuzzy>=0.18.0",
+    "python-Levenshtein>=0.23.0",
+    
+    # Utilities & Monitoring
+    "pydantic-settings>=2.1.0",
+    "python-dotenv>=1.0.0",
+    "loguru>=0.7.0",
+    "prometheus-client>=0.19.0",
+    "opentelemetry-api>=1.21.0",
+    "opentelemetry-sdk>=1.21.0",
+    
+    # Data Processing
+    "PyPDF2>=3.0.0",
+    "python-docx>=1.1.0",
+    "openpyxl>=3.1.0",
+    "beautifulsoup4>=4.12.0",
+    "requests>=2.31.0",
+    
+    # Testing & Development
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.11.0",
+    "isort>=5.12.0",
+    "flake8>=6.1.0",
+    "mypy>=1.7.0",
+    
+    # Visualization & Frontend Support
+    "plotly>=5.17.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "networkx>=3.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.26.0",
+    "pre-commit>=3.5.0",
+    "sphinx>=7.2.0",
+    "sphinx-rtd-theme>=1.3.0",
+    "mkdocs>=1.5.0",
+    "mkdocs-material>=9.4.0",
+]
+
+quantum-hardware = [
+    "qiskit-ibm-provider>=0.7.0",
+    "amazon-braket-sdk>=1.73.0",
+    "cirq>=1.3.0",
+    "pennylane-lightning>=0.35.0",
+]
+
+cloud = [
+    "boto3>=1.34.0",
+    "google-cloud-storage>=2.10.0",
+    "azure-storage-blob>=12.19.0",
+    "kubernetes>=28.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/xqelm"
+Documentation = "https://docs.xqelm.org"
+Repository = "https://github.com/your-org/xqelm.git"
+"Bug Tracker" = "https://github.com/your-org/xqelm/issues"
+Changelog = "https://github.com/your-org/xqelm/blob/main/CHANGELOG.md"
+
+[project.scripts]
+xqelm = "xqelm.cli:main"
+xqelm-server = "xqelm.api.main:run_server"
+xqelm-worker = "xqelm.workers.main:run_worker"
+xqelm-migrate = "xqelm.database.migrate:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311', 'py312']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["xqelm"]
+known_third_party = ["pennylane", "qiskit", "torch", "transformers"]
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "pennylane.*",
+    "qiskit.*",
+    "neo4j.*",
+    "legal_citation_parser.*",
+    "indic_nlp_library.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=xqelm",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "quantum: Quantum circuit tests",
+    "e2e: End-to-end tests",
+    "slow: Slow running tests",
+    "gpu: Tests requiring GPU",
+    "quantum_hardware: Tests requiring quantum hardware",
+]
+
+[tool.coverage.run]
+source = ["src/xqelm"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/migrations/*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]

@@ -1,0 +1,136 @@
+# XQELM Default Configuration
+
+# Application Settings
+app:
+  name: "XQELM"
+  version: "1.0.0"
+  description: "Explainable Quantum-Enhanced Language Models for Legal Reasoning"
+  debug: false
+  log_level: "INFO"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  reload: false
+  cors:
+    allow_origins: ["*"]
+    allow_methods: ["GET", "POST", "PUT", "DELETE"]
+    allow_headers: ["*"]
+  rate_limiting:
+    enabled: true
+    requests_per_minute: 100
+    burst_size: 20
+
+# Database Configuration
+database:
+  postgresql:
+    url: "postgresql://xqelm_user:xqelm_password@localhost:5432/xqelm_db"
+    pool_size: 20
+    max_overflow: 30
+    echo: false
+  redis:
+    url: "redis://localhost:6379/0"
+    password: null
+    db: 0
+    max_connections: 20
+  neo4j:
+    uri: "bolt://localhost:7687"
+    user: "neo4j"
+    password: "neo4j_password"
+    database: "neo4j"
+    max_connection_lifetime: 3600
+
+# Quantum Computing Configuration
+quantum:
+  backend: "default.qubit"
+  device: "lightning.qubit"
+  shots: 1024
+  seed: 42
+  n_qubits: 12
+  n_layers: 4
+  optimization:
+    optimizer: "adam"
+    learning_rate: 0.01
+    max_iterations: 100
+
+# Legal System Configuration
+legal:
+  default_jurisdiction: "india"
+  default_language: "english"
+  supported_languages: ["english", "hindi"]
+  case_types:
+    - "bail_application"
+    - "cheque_bounce"
+    - "property_dispute"
+    - "motor_vehicle_claim"
+    - "consumer_dispute"
+    - "gst_dispute"
+    - "legal_aid"
+    - "family_court"
+    - "income_tax_appeal"
+    - "employment_dispute"
+
+# Training Configuration
+training:
+  model_save_path: "./models"
+  checkpoint_dir: "./checkpoints"
+  data_path: "./data"
+  batch_size: 32
+  epochs: 100
+  validation_split: 0.2
+  early_stopping_patience: 10
+  cross_validation:
+    enabled: true
+    folds: 5
+  data_weights:
+    real_data: 1.5
+    synthetic_data: 1.0
+
+# Security Configuration
+security:
+  jwt:
+    secret_key: "your-super-secret-jwt-key"
+    algorithm: "HS256"
+    access_token_expire_minutes: 30
+    refresh_token_expire_days: 7
+  bcrypt:
+    rounds: 12
+  session:
+    timeout: 3600
+
+# File Storage Configuration
+storage:
+  upload_dir: "./uploads"
+  max_file_size: 10485760  # 10MB
+  allowed_extensions: ["pdf", "doc", "docx", "txt"]
+
+# Monitoring Configuration
+monitoring:
+  prometheus:
+    enabled: true
+    port: 9090
+  metrics:
+    enabled: true
+  logging:
+    format: "json"
+    level: "INFO"
+    file: "./logs/xqelm.log"
+
+# External Services Configuration
+external_services:
+  openai:
+    api_key: null
+    model: "gpt-3.5-turbo"
+  huggingface:
+    api_key: null
+    model: "sentence-transformers/all-MiniLM-L6-v2"
+
+# Feature Flags
+features:
+  graphql_api: false
+  real_time_monitoring: false
+  multi_language_support: false
+  advanced_explainability: true
+  quantum_visualization: false

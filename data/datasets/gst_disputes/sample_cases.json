@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "dataset_name": "GST Dispute Sample Cases",
+    "version": "1.0",
+    "description": "Sample GST dispute cases for testing and training the quantum legal model",
+    "total_cases": 5,
+    "created_date": "2025-01-07",
+    "legal_domain": "tax_law",
+    "jurisdiction": "India"
+  },
+  "cases": [
+    {
+      "case_id": "GST001",
+      "taxpayer_name": "ABC Manufacturing Pvt. Ltd.",
+      "gstin": "07AABCA1234M1Z5",
+      "dispute_type": "input_tax_credit",
+      "business_type": "manufacturer",
+      "dispute_description": "Input tax credit denied on capital goods purchased for setting up new manufacturing unit. Department claims goods not used for business purposes.",
+      "disputed_amount": 2500000.0,
+      "tax_period": "2023-24",
+      "notice_date": "2024-03-15",
+      "response_deadline": "2024-04-15",
+      "transaction_value": 15000000.0,
+      "tax_rate_claimed": 18.0,
+      "tax_rate_demanded": 18.0,
+      "evidence_documents": [
+        "Purchase invoices",
+        "Installation certificates",
+        "Factory layout plans",
+        "Chartered accountant certificate"
+      ],
+      "invoices_provided": true,
+      "books_of_accounts": true,
+      "contracts_agreements": true,
+      "show_cause_notice": true,
+      "personal_hearing_attended": true,
+      "written_submissions": true,
+      "has_legal_counsel": true,
+      "authorized_representative": true,
+      "similar_cases_precedent": [
+        "Mohit Minerals Pvt. Ltd. vs. Union of India",
+        "CCE vs. Larsen & Toubro Ltd."
+      ],
+      "department_position": "Capital goods not directly used in manufacturing process",
+      "taxpayer_position": "Capital goods essential for manufacturing operations, eligible for ITC",
+      "expected_outcome": "favorable",
+      "success_probability": 0.75
+    },
+    {
+      "case_id": "GST002",
+      "taxpayer_name": "XYZ Services Ltd.",
+      "gstin": "09AABCX5678N1Z2",
+      "dispute_type": "classification",
+      "business_type": "service_provider",
+      "dispute_description": "Classification dispute regarding software development services. Department treating as goods supply instead of services.",
+      "disputed_amount": 1800000.0,
+      "tax_period": "2023-24",
+      "notice_date": "2024-02-20",
+      "response_deadline": "2024-03-22",
+      "transaction_value": 10000000.0,
+      "tax_rate_claimed": 18.0,
+      "tax_rate_demanded": 28.0,
+      "evidence_documents": [
+        "Service agreements",
+        "Technical specifications",
+        "Delivery acceptance certificates",
+        "Expert opinion"
+      ],
+      "invoices_provided": true,
+      "books_of_accounts": true,
+      "contracts_agreements": true,
+      "show_cause_notice": true,
+      "personal_hearing_attended": false,
+      "written_submissions": true,
+      "has_legal_counsel": true,
+      "authorized_representative": false,
+      "similar_cases_precedent": [
+        "TCS vs. State of Andhra Pradesh",
+        "Infosys vs. Union of India"
+      ],
+      "department_position": "Software embedded in hardware constitutes goods supply",
+      "taxpayer_position": "Pure software development service, no goods component",
+      "expected_outcome": "favorable",
+      "success_probability": 0.68
+    },
+    {
+      "case_id": "GST003",
+      "taxpayer_name": "PQR Trading Co.",
+      "gstin": "27AABCP9876Q1Z8",
+      "dispute_type": "valuation",
+      "business_type": "trader",
+      "dispute_description": "Valuation dispute on related party transactions. Department alleging undervaluation of goods purchased from sister concern.",
+      "disputed_amount": 3200000.0,
+      "tax_period": "2023-24",
+      "notice_date": "2024-01-10",
+      "response_deadline": "2024-02-10",
+      "transaction_value": 25000000.0,
+      "tax_rate_claimed": 12.0,
+      "tax_rate_demanded": 12.0,
+      "evidence_documents": [
+        "Related party agreements",
+        "Market price analysis",
+        "Independent valuation report",
+        "Comparable transactions"
+      ],
+      "invoices_provided": true,
+      "books_of_accounts": true,
+      "contracts_agreements": true,
+      "show_cause_notice": true,
+      "personal_hearing_attended": true,
+      "written_submissions": true,
+      "has_legal_counsel": false,
+      "authorized_representative": true,
+      "similar_cases_precedent": [
+        "Kellogg India vs. Commissioner",
+        "Maruti Suzuki vs. Commissioner"
+      ],
+      "department_position": "Transaction value below market price, additional tax demanded",
+      "taxpayer_position": "Arms length pricing followed, transaction value correct",
+      "expected_outcome": "mixed",
+      "success_probability": 0.55
+    },
+    {
+      "case_id": "GST004",
+      "taxpayer_name": "LMN Exports Pvt. Ltd.",
+      "gstin": "33AABCL4567M1Z9",
+      "dispute_type": "refund",
+      "business_type": "exporter",
+      "dispute_description": "Refund claim rejected for zero-rated supplies. Department questioning genuineness of exports and demanding additional documents.",
+      "disputed_amount": 4500000.0,
+      "tax_period": "2023-24",
+      "notice_date": "2024-04-01",
+      "response_deadline": "2024-05-01",
+      "transaction_value": 50000000.0,
+      "tax_rate_claimed": 0.0,
+      "tax_rate_demanded": 0.0,
+      "evidence_documents": [
+        "Shipping bills",
+        "Export invoices",
+        "Bank realization certificates",
+        "Foreign exchange documents"
+      ],
+      "invoices_provided": true,
+      "books_of_accounts": true,
+      "contracts_agreements": true,
+      "show_cause_notice": false,
+      "personal_hearing_attended": false,
+      "written_submissions": true,
+      "has_legal_counsel": true,
+      "authorized_representative": true,
+      "similar_cases_precedent": [
+        "Essar Steel vs. Commissioner",
+        "Reliance Industries vs. Union of India"
+      ],
+      "department_position": "Insufficient evidence of actual exports, refund not admissible",
+      "taxpayer_position": "All export conditions fulfilled, refund legally due",
+      "expected_outcome": "favorable",
+      "success_probability": 0.82
+    },
+    {
+      "case_id": "GST005",
+      "taxpayer_name": "RST Retail Chain",
+      "gstin": "19AABCR7890S1Z3",
+      "dispute_type": "penalty",
+      "business_type": "trader",
+      "dispute_description": "Penalty imposed for delayed filing of returns and late payment of tax. Taxpayer claims reasonable cause due to technical difficulties.",
+      "disputed_amount": 850000.0,
+      "tax_period": "2023-24",
+      "notice_date": "2024-05-15",
+      "response_deadline": "2024-06-15",
+      "transaction_value": 8500000.0,
+      "tax_rate_claimed": 18.0,
+      "tax_rate_demanded": 18.0,
+      "evidence_documents": [
+        "System failure reports",
+        "Technical support tickets",
+        "Bank payment receipts",
+        "Previous compliance record"
+      ],
+      "invoices_provided": true,
+      "books_of_accounts": true,
+      "contracts_agreements": false,
+      "show_cause_notice": true,
+      "personal_hearing_attended": true,
+      "written_submissions": true,
+      "has_legal_counsel": false,
+      "authorized_representative": false,
+      "similar_cases_precedent": [
+        "Bharti Airtel vs. Union of India",
+        "HDFC Bank vs. Commissioner"
+      ],
+      "department_position": "No reasonable cause established, penalty justified",
+      "taxpayer_position": "Technical difficulties beyond control, penalty should be waived",
+      "expected_outcome": "mixed",
+      "success_probability": 0.45
+    }
+  ],
+  "statistics": {
+    "dispute_types": {
+      "input_tax_credit": 1,
+      "classification": 1,
+      "valuation": 1,
+      "refund": 1,
+      "penalty": 1
+    },
+    "business_types": {
+      "manufacturer": 1,
+      "service_provider": 1,
+      "trader": 2,
+      "exporter": 1
+    },
+    "average_disputed_amount": 2570000.0,
+    "success_rate_distribution": {
+      "high_probability": 2,
+      "medium_probability": 1,
+      "low_probability": 2
+    }
+  }
+}
