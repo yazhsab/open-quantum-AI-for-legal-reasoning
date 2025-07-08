@@ -212,10 +212,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## 🤝 Community
 
-- **Discord**: [Join our community](https://discord.gg/xqelm)
-- **Forum**: [GitHub Discussions](https://github.com/your-org/xqelm/discussions)
-- **Twitter**: [@XQELMProject](https://twitter.com/XQELMProject)
-- **LinkedIn**: [XQELM Research Group](https://linkedin.com/company/xqelm)
+Coming Soon...
 
 ## 📄 License
 
@@ -230,9 +227,9 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## 📞 Support
 
-- **Email**: support@xqelm.org
-- **Issues**: [GitHub Issues](https://github.com/your-org/xqelm/issues)
-- **Documentation**: [docs.xqelm.org](https://docs.xqelm.org)
+- **Email**: kannanprabakaran84@gmail.com
+- **Issues**: [GitHub Issues](https://github.com/yazhsab/open-quantum-AI-for-legal-reasoning/issues)
+- **Documentation**: Coming soon.....
 
 ---
 
