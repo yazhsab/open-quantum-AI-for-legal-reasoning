@@ -203,12 +203,22 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## 📚 Documentation
 
-- [Technical Architecture](docs/architecture.md)
-- [Quantum Components](docs/quantum-components.md)
-- [Legal Use Cases](docs/use-cases.md)
-- [API Reference](docs/api-reference.md)
-- [Deployment Guide](docs/deployment.md)
-- [Research Papers](docs/research.md)
+### Architecture Documentation
+- **[System Architecture](docs/ARCHITECTURE.md)** - Comprehensive system design, technology choices, and architectural decisions
+- **[Quantum Architecture Deep Dive](docs/QUANTUM_ARCHITECTURE.md)** - Detailed quantum computing implementation and algorithms
+- **[Implementation Guide](docs/IMPLEMENTATION_GUIDE.md)** - Step-by-step guide for building and extending the system
+
+### Technical Documentation
+- [API Reference](docs/api/README.md) - Complete API documentation
+- [Quantum Components](docs/quantum-components.md) - Quantum circuit implementations
+- [Legal Use Cases](docs/use-cases.md) - Detailed use case analysis
+- [Deployment Guide](docs/deployment.md) - Production deployment strategies
+- [Training Guide](TRAINING_AND_TESTING_GUIDE.md) - Model training and testing procedures
+
+### Research Documentation
+- [Research Papers](docs/research.md) - Academic publications and research
+- [Quantum Legal AI Analysis](quantum-legal-all-usecases-analysis.md) - Comprehensive use case analysis
+- [Technical Design Document](quantum-legal-llm-design.md) - Original technical design
 
 ## 🤝 Community
 
