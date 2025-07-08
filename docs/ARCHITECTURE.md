@@ -41,69 +41,69 @@ The Explainable Quantum-Enhanced Language Models for Legal Reasoning (XQELM) sys
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Frontend Layer                           │
 │              React TypeScript + Material-UI                     │
-│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐      │
-│         │   Legal     │  │  Quantum    │  │ Explanation │      │
-│         │ Dashboard   │  │Visualization│  │  Interface  │      │
-│         └─────────────┘  └─────────────┘  └─────────────┘      │
+│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐       │
+│         │   Legal     │  │  Quantum    │  │ Explanation │       │
+│         │ Dashboard   │  │Visualization│  │  Interface  │       │
+│         └─────────────┘  └─────────────┘  └─────────────┘       │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ HTTPS/WebSocket
 ┌─────────────────────▼───────────────────────────────────────────┐
 │                    API Gateway Layer                            │
 │                FastAPI + GraphQL + JWT Auth                     │
-│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐      │
-│         │    REST     │  │   GraphQL   │  │ Rate Limiter│      │
-│         │   Endpoints │  │   Schema    │  │ & Security  │      │
-│         └─────────────┘  └─────────────┘  └─────────────┘      │
+│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐       │
+│         │    REST     │  │   GraphQL   │  │ Rate Limiter│       │
+│         │   Endpoints │  │   Schema    │  │ & Security  │       │
+│         └─────────────┘  └─────────────┘  └─────────────┘       │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ Internal API
 ┌─────────────────────▼───────────────────────────────────────────┐
 │              Quantum-Classical Orchestrator                     │
 │                    Python + Celery                              │
-│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐      │
-│         │   Query     │  │  Workflow   │  │   Result    │      │
-│         │ Processing  │  │Orchestration│  │ Aggregation │      │
-│         └─────────────┘  └─────────────┘  └─────────────┘      │
+│         ┌─────────────┐  ┌─────────────┐  ┌─────────────┐       │
+│         │   Query     │  │  Workflow   │  │   Result    │       │
+│         │ Processing  │  │Orchestration│  │ Aggregation │       │
+│         └─────────────┘  └─────────────┘  └─────────────┘       │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ Quantum-Classical Interface
 ┌─────────────────────▼───────────────────────────────────────────┐
 │                 Quantum Processing Core                         │
 │                  PennyLane + Qiskit                             │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │   Quantum    │ │   Quantum    │ │   Quantum    │         │
-│    │  Embeddings  │ │  Attention   │ │  Reasoning   │         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │ Explainability│ │   Circuit    │ │   Hardware   │         │
-│    │    Module     │ │ Optimization │ │   Backends   │         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐           │
+│    │   Quantum    │ │   Quantum    │ │   Quantum    │           │
+│    │  Embeddings  │ │  Attention   │ │  Reasoning   │           │
+│    └──────────────┘ └──────────────┘ └──────────────┘           │
+│    ┌──────────────-┐  ┌──────────────┐ ┌──────────────┐         │
+│    │ Explainability│  │   Circuit    │ │   Hardware   │         │
+│    │    Module     │  │ Optimization │ │   Backends   │         │
+│    └──────────────-┘  └──────────────┘ └──────────────┘         │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ Classical Processing Interface
 ┌─────────────────────▼───────────────────────────────────────────┐
-│               Classical Processing Layer                         │
+│               Classical Processing Layer                        │
 │              PyTorch + Transformers + spaCy                     │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │     Text     │ │  Knowledge   │ │   Response   │         │
-│    │Preprocessing │ │     Base     │ │  Generation  │         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │   Legal      │ │   Vector     │ │   Classical  │         │
-│    │   Entities   │ │   Search     │ │   Reasoning  │         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐           │
+│    │     Text     │ │  Knowledge   │ │   Response   │           │
+│    │Preprocessing │ │     Base     │ │  Generation  │           │
+│    └──────────────┘ └──────────────┘ └──────────────┘           │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐           │
+│    │   Legal      │ │   Vector     │ │   Classical  │           │
+│    │   Entities   │ │   Search     │ │   Reasoning  │           │
+│    └──────────────┘ └──────────────┘ └──────────────┘           │
 └─────────────────────┬───────────────────────────────────────────┘
                       │ Data Access Layer
 ┌─────────────────────▼───────────────────────────────────────────┐
 │                  Data & Storage Layer                           │
-│         PostgreSQL + Neo4j + Redis + FAISS + MinIO             │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │ Relational   │ │    Graph     │ │    Cache     │         │
-│    │   Database   │ │   Database   │ │   & Session  │         │
-│    │ (PostgreSQL) │ │   (Neo4j)    │ │   (Redis)    │         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐         │
-│    │   Vector     │ │    Object    │ │   Search     │         │
-│    │   Database   │ │   Storage    │ │   Engine     │         │
-│    │   (FAISS)    │ │   (MinIO)    │ │(Elasticsearch)│         │
-│    └──────────────┘ └──────────────┘ └──────────────┘         │
+│         PostgreSQL + Neo4j + Redis + FAISS + MinIO              │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────┐           │
+│    │ Relational   │ │    Graph     │ │    Cache     │           │
+│    │   Database   │ │   Database   │ │   & Session  │           │
+│    │ (PostgreSQL) │ │   (Neo4j)    │ │   (Redis)    │           │
+│    └──────────────┘ └──────────────┘ └──────────────┘           │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────-┐           │
+│    │   Vector     │ │    Object    │ │   Search      │           │
+│    │   Database   │ │   Storage    │ │   Engine      │           │
+│    │   (FAISS)    │ │   (MinIO)    │ │(Elasticsearch)│          │
+│    └──────────────┘ └──────────────┘ └──────────────-┘           │
 └─────────────────────────────────────────────────────────────────┘
 ```
 

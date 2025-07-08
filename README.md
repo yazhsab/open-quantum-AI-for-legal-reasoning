@@ -33,27 +33,27 @@ XQELM is a groundbreaking open-source research project that combines quantum com
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    Frontend Layer                        │
+│                    Frontend Layer                       │
 │              (React + TypeScript + D3.js)               │
 └─────────────────────┬───────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────┐
-│                  API Gateway                             │
+│                  API Gateway                            │
 │              (FastAPI + GraphQL)                        │
 └─────────────────────┬───────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────┐
-│              Quantum-Classical Orchestrator              │
+│              Quantum-Classical Orchestrator             │
 │                 (Python + Celery)                       │
 └─────────────────────┬───────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────┐
-│              Quantum Processing Core                     │
+│              Quantum Processing Core                    │
 │              (PennyLane + Qiskit)                       │
 └─────────────────────┬───────────────────────────────────┘
                       │
 ┌─────────────────────▼───────────────────────────────────┐
-│              Data & Knowledge Layer                      │
+│              Data & Knowledge Layer                     │
 │           (PostgreSQL + Neo4j + Redis)                  │
 └─────────────────────────────────────────────────────────┘
 ```
