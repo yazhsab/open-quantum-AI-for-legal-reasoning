@@ -99,11 +99,11 @@ The Explainable Quantum-Enhanced Language Models for Legal Reasoning (XQELM) sys
 │    │   Database   │ │   Database   │ │   & Session  │           │
 │    │ (PostgreSQL) │ │   (Neo4j)    │ │   (Redis)    │           │
 │    └──────────────┘ └──────────────┘ └──────────────┘           │
-│    ┌──────────────┐ ┌──────────────┐ ┌──────────────-┐           │
-│    │   Vector     │ │    Object    │ │   Search      │           │
-│    │   Database   │ │   Storage    │ │   Engine      │           │
+│    ┌──────────────┐ ┌──────────────┐ ┌──────────────-┐          │
+│    │   Vector     │ │    Object    │ │   Search      │          │
+│    │   Database   │ │   Storage    │ │   Engine      │          │
 │    │   (FAISS)    │ │   (MinIO)    │ │(Elasticsearch)│          │
-│    └──────────────┘ └──────────────┘ └──────────────-┘           │
+│    └──────────────┘ └──────────────┘ └──────────────-┘          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
